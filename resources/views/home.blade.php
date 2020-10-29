@@ -23,7 +23,7 @@
                 @foreach ($users as $user)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $user->theses->count() }}</td>
+                        <td title="Gefunden: @foreach($user->theses as $thesis){{ $thesis->number }} @endforeach">{{ $user->theses->count() }}</td>
                         <td>{{ $user->name }}</td>
                     </tr>
                 @endforeach
